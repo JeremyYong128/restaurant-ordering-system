@@ -1,0 +1,26 @@
+{
+  "name": "Order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "price": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "orderItems": {
+      "type": "hasMany",
+      "model": "OrderItem"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

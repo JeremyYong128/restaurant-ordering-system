@@ -1,0 +1,7 @@
+<div class="prev-order-item">
+    <h3>{{this.dateFormatted}}</h3>
+    {{#each @item.orderItems as |orderItem|}}
+        <p>{{orderItem.quantity}} x {{orderItem.menuItem.name}}, ${{orderItem.price}}</p>
+    {{/each}}
+    <strong>Total: {{@item.price}}</strong>
+</div>

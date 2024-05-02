@@ -1,0 +1,28 @@
+{{#if this.userLogin.loggedIn}}
+    <Jumbo>
+        <h2>Welcome, {{this.userLogin.customer.name}}!</h2>
+        <p>Here are your past orders:</p>
+    </Jumbo>
+    <div class="prev-order-list" {{did-insert this.getPreviousOrders}}>
+        {{#each this.userLogin.previousOrders as |order|}}
+            <PrevOrderItem @item={{order}}/>
+        {{/each}}
+    </div>
+{{else}}
+    <Jumbo>
+        <h2>Welcome!</h2>
+        <form {{on "submit" this.userLogin.login}}>
+            <p class="login-text">Enter your login details:</p>
+            <label>Username: <Input @type="text" required="true" /></label>
+            <label>Password: <Input @type="text" required="true" /></label>
+            <input type="submit" value="Log In" />
+        </form>
+        <form {{on "submit" this.userLogin.createAccount}}>
+            <p class="login-text">Create an account:</p>
+            <label>Name: <Input @type="text" required="true" /></label>
+            <label>Username: <Input @type="text" required="true" /></label>
+            <label>Password: <Input @type="text" required="true" /></label>
+            <input type="submit" value="Log In" />
+        </form>
+    </Jumbo>
+{{/if}}

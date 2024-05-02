@@ -1,0 +1,8 @@
+<div class="order-form">
+    <form {{on "submit" this.submitForm}}>
+        {{#each this.itemList as |orderItem|}}
+        <OrderItem @item={{orderItem}}/>
+        {{/each}}
+        <input class="order-button" type="submit" value="Place Order" />
+    </form>
+</div>

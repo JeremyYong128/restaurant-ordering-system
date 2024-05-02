@@ -1,0 +1,10 @@
+<div class="order-item">
+  <div class="order-item-info">
+  <h3>{{@item.name}}</h3>
+  <p>{{@item.price}}</p>
+</div>
+  <label>
+    Quantity:
+    <Input @type="number" min="0" required="true" @value={{mut @item.quantity}}/>
+  </label>
+</div>

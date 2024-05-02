@@ -1,0 +1,25 @@
+<nav class="menu">
+  <LinkTo @route="index" class="menu-index">
+    <h1>SuperRentals</h1>
+  </LinkTo>
+  <div class="links">
+    <LinkTo @route="menu" class="nav-menu">
+      Menu
+    </LinkTo>
+    <LinkTo @route="order" class="nav-order">
+      Order
+    </LinkTo>
+    <LinkTo @route="login" class="nav-login">
+      {{#if this.userLogin.loggedIn}}
+        Account
+      {{else}}
+        Log In
+      {{/if}}
+    </LinkTo>
+    {{#if this.userLogin.loggedIn}}
+    <LinkTo @route="login" {{action "logout"}} class="nav-login">
+      Log Out
+    </LinkTo>
+    {{/if}}
+  </div>
+</nav>
