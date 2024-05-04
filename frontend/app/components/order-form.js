@@ -30,6 +30,8 @@ export default class OrderFormComponent extends Component {
   submitForm(event) {
     event.preventDefault();
 
+    console.log(this.itemList);
+
     if (!this.userLogin.loggedIn) {
       alert("You must be logged in to submit an order!");
       return;
