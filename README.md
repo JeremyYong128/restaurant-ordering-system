@@ -29,8 +29,9 @@ As the application is not linked to a persistent database (see [Areas for Improv
 
 This application consists of four main models: Customer, MenuItem, Order, and OrderItem.
 
-### 1. Customer: represents a customer's profile.
+### 1. Customer
 
+Represents a customer's profile.
 
 **Properties:**
 - id: Primary key.
@@ -41,16 +42,18 @@ This application consists of four main models: Customer, MenuItem, Order, and Or
 **Relations:**
 - Orders (hasMany): each customer can make multiple orders.
 
-### 2. MenuItem: represents an item on the menu.
+### 2. MenuItem
 
+Represents an item on the menu.
 
 **Properties:**
 - id: Primary key.
 - name: Name of the item.
 - price: Price of the item.
 
-### 3. Order: represents an order made by a customer.
+### 3. Order
 
+Represents an order made by a customer.
 
 **Properties:**
 - id: Primary key.
@@ -62,6 +65,7 @@ This application consists of four main models: Customer, MenuItem, Order, and Or
 
 ### 4. OrderItem:
 
+Represents an order of a particular menu item.
 
 **Properties:**
 - id: Primary key.
