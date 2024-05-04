@@ -29,7 +29,7 @@ As the application is not linked to a persistent database (see [Areas for Improv
 
 This application consists of four main models: Customer, MenuItem, Order, and OrderItem.
 
-1. Customer: represents a customer's profile.
+### 1. Customer: represents a customer's profile.
 
 
 **Properties:**
@@ -41,7 +41,7 @@ This application consists of four main models: Customer, MenuItem, Order, and Or
 **Relations:**
 - Orders (hasMany): each customer can make multiple orders.
 
-2. MenuItem: represents an item on the menu.
+### 2. MenuItem: represents an item on the menu.
 
 
 **Properties:**
@@ -49,7 +49,7 @@ This application consists of four main models: Customer, MenuItem, Order, and Or
 - name: Name of the item.
 - price: Price of the item.
 
-3. Order: represents an order made by a customer.
+### 3. Order: represents an order made by a customer.
 
 
 **Properties:**
@@ -60,7 +60,7 @@ This application consists of four main models: Customer, MenuItem, Order, and Or
 **Relations:**
 - OrderItems (hasMany): each order consists of one or multiple order items.
 
-4. OrderItem:
+### 4. OrderItem:
 
 
 **Properties:**
@@ -76,7 +76,7 @@ This application consists of four main models: Customer, MenuItem, Order, and Or
 
 This section documents the API endpoints provided for interacting with the Loopback models.
 
-1. Customer
+### 1. Customer
 
 `GET /api/customerDetails?customerId={id}`
 - Description: Retrieve details of a customer by ID. Includes details of previous orders.
@@ -130,7 +130,7 @@ This section documents the API endpoints provided for interacting with the Loopb
 /api/customers/login?username=Bob12&password=Bob12
 ```
 
-    - Sample response:
+- Sample response:
 
 ```
 {
@@ -141,7 +141,7 @@ This section documents the API endpoints provided for interacting with the Loopb
 }
 ```
 
-2. MenuItem
+### 2. MenuItem
 
 `GET /api/menuItems/menuItems`
 - Description: Retrieve a list of all menu items.
@@ -150,7 +150,7 @@ This section documents the API endpoints provided for interacting with the Loopb
 /api/menuItems/menuItems
 ```
 
-    - Sample response:
+- Sample response:
 
 ```
 [
@@ -166,7 +166,7 @@ This section documents the API endpoints provided for interacting with the Loopb
 ]
 ```
 
-3. Order
+### 3. Order
 
 `GET /api/orders/orderDetails?orderId={id}`
 - Description: Retrieve details of an order by ID.
@@ -177,7 +177,7 @@ This section documents the API endpoints provided for interacting with the Loopb
 /api/orders/orderDetails?orderId=1
 ```
 
-    - Sample response:
+- Sample response:
 
 ```
 {
@@ -235,7 +235,7 @@ This section documents the API endpoints provided for interacting with the Loopb
 }
 ```
 
-4. OrderItem
+### 4. OrderItem
 
 `GET /api/orderItems/orderItemDetails?orderItemId={id}`
 - Description: Retrieve details of an order item by ID.
@@ -246,7 +246,7 @@ This section documents the API endpoints provided for interacting with the Loopb
 /api/orderItems/orderItemDetails?orderItemId=1
 ```
 
-    - Sample response:
+- Sample response:
 
 ```
 {
